@@ -3,10 +3,10 @@ include 'lib/library.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama                     =@$_POST['nama'];
-    $kelas            =@$_POST['kelas'];
-    $tanggal           =@$_POST['tanggal'];
-    $jam                   =@$_POST['jam'];
-    $keterangan                 =@$_POST['keterangan'];
+    $kelas                    =@$_POST['kelas'];
+    $tanggal                  =@$_POST['tanggal'];
+    $jam                      =@$_POST['jam'];
+    $keterangan               =@$_POST['keterangan'];
     
 
     if (empty($nama)) {
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  $error1 = flash('error1');
     
 $sql = "SELECT * FROM keterlambatan";
-$dataKelas = $mysqli->query($sql) or die($mysqli->error);
+$keterlambatan = $mysqli->query($sql) or die($mysqli->error);
 
 include 'views/v_keterlambatan.php';
 

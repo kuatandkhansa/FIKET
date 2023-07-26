@@ -315,7 +315,14 @@ table{
             <table>
             <div class="content">
                 <h1>Siswa Yang Terlambat</h1>
+                <tbody id="data_keterlambatan">
+                <?php
+        $i = 1;
+        while ($p_piket = $keterlambatan->fetch_array()) {
+        ?>    
+
                 <br>
+        <form method="post" action="v_keterlambatan">
         <tr>
             <td><label for="nama">Nama Siswa:</label>
         <input type="text" id="nama" name="nama" required value="<?=@$p_piket['nama']?>">
@@ -347,7 +354,10 @@ table{
     
         <input type="submit" value="simpan" id="tombol"></td>
     </form> </tr>
+    <?php } ?>
+    </tbody>
 </table>
+</form>
                
     
                 <br>
@@ -370,26 +380,6 @@ table{
         </div>
     </div>
 
-    <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Tangkap data dari form
-    $nama = $_POST["nama"];
-    $kelas = $_POST["kelas"];
-    $tanggal = $_POST["tanggal"];
-    $jam = $_POST["jam"];
-    $keterangan = $_POST["keterangan"];
-
-    // Query untuk menyimpan data ke database
-    $query = "INSERT INTO keterlambatan (nama_siswa, kelas, tanggal, jam, keterangan) 
-              VALUES ('$nama', '$kelas', '$tanggal', '$jam', '$keterangan')";
-
-    // Eksekusi query
-    if (mysqli_query($koneksi, $query)) {
-        echo "Data berhasil disimpan ke database.";
-    } else {
-        echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
-    }
-}
-?>
+   
 </body>
 </html>
