@@ -336,16 +336,16 @@ table{
         <label for="jam">Jam:</label>
         <select id="jam" name="jam" required>
             <option value="">Pilih Jam</option>
-            <option value="1"<?= @$p_piket['jam'] == '1' ? 'selected' : '' ?> >Jam 1</option>
-            <option value="2"<?= @$p_piket['jam'] == '2' ? 'selected' : '' ?> >Jam 2</option>
-            <option value="3"<?= @$p_piket['jam'] == '3' ? 'selected' : '' ?> >Jam 3</option>
-            <option value="4"<?= @$p_piket['jam'] == '4' ? 'selected' : '' ?> >Jam 4</option>
-            <option value="5"<?= @$p_piket['jam'] == '5' ? 'selected' : '' ?> >Jam 5</option>
-            <option value="6"<?= @$p_piket['jam'] == '6' ? 'selected' : '' ?> >Jam 6</option>
-            <option value="7"<?= @$p_piket['jam'] == '7' ? 'selected' : '' ?> >Jam 7</option>
-            <option value="8"<?= @$p_piket['jam'] == '8' ? 'selected' : '' ?> >Jam 8</option>
-            <option value="9"<?= @$p_piket['jam'] == '9' ? 'selected' : '' ?> >Jam 9</option>
-            <option value="10"<?= @$p_piket['jam'] == '10' ? 'selected' : '' ?> >Jam 10</option>
+            <option value="1"<?= @$keterlambatan['jam'] == '1' ? 'selected' : '' ?> >Jam 1</option>
+            <option value="2"<?= @$keterlambatan['jam'] == '2' ? 'selected' : '' ?> >Jam 2</option>
+            <option value="3"<?= @$keterlambatan['jam'] == '3' ? 'selected' : '' ?> >Jam 3</option>
+            <option value="4"<?= @$keterlambatan['jam'] == '4' ? 'selected' : '' ?> >Jam 4</option>
+            <option value="5"<?= @$keterlambatan['jam'] == '5' ? 'selected' : '' ?> >Jam 5</option>
+            <option value="6"<?= @$keterlambatan['jam'] == '6' ? 'selected' : '' ?> >Jam 6</option>
+            <option value="7"<?= @$keterlambatan['jam'] == '7' ? 'selected' : '' ?> >Jam 7</option>
+            <option value="8"<?= @$keterlambatan['jam'] == '8' ? 'selected' : '' ?> >Jam 8</option>
+            <option value="9"<?= @$keterlambatan['jam'] == '9' ? 'selected' : '' ?> >Jam 9</option>
+            <option value="10"<?= @$keterlambatan['jam'] == '10' ? 'selected' : '' ?> >Jam 10</option>
             <!-- Tambahkan opsi lain sesuai kebutuhan -->
         </select>
    
@@ -365,11 +365,11 @@ table{
                 <table border="1" id="izintable">
                     <thead>
                         <tr><br>
-                            <th><?=@$p_piket['nama'] ?>Nama Siswa</th>
-                            <th><?=@$p_piket['kelas'] ?>Kelas</th>
-                            <th><?=@$p_piket['tanggal'] ?>Tanggal</th>
-                            <th><?=@$p_piket['jam'] ?>Jam</th>
-                            <th><?=@$p_piket['keterangan'] ?>Keterangan</th>
+                            <th><?=@$keterlambatan['nama'] ?>Nama Siswa</th>
+                            <th><?=@$keterlambatan['kelas'] ?>Kelas</th>
+                            <th><?=@$keterlambatan['tanggal'] ?>Tanggal</th>
+                            <th><?=@$keterlambatan['jam'] ?>Jam</th>
+                            <th><?=@$keterlambatan['keterangan'] ?>Keterangan</th>
                         </tr>
                     </thead>
                     <tbody id="tabelData">
