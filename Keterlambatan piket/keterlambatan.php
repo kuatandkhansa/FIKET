@@ -28,6 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $sql = "SELECT * FROM keterlambatan";
 $keterlambatan = $mysqli->query($sql) or die($mysqli->error);
 
-include 'views/v_keterlambatan.php';
+include 'v_keterlambatan.php';
 
 ?>
